@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "5d725a1b7b292f5f8ceff788",
+    "titleHeader": "It's all going to be alright!",
+    "dailyEntry": "Waking up everyday, with tens and hundreds of notifications from the news app, it's getting all tiring! I understand we need to get informed but doesn't that have a limit? I feel like the more I read, the more depressed I get."
+    // "bootcamp": "5d713995b721c3bb38c1f5d0",
+    // "user": "5d7a514b5d2c12c7449be045"
+  },
+  {
+    "_id": "5d713a66ec8f2b88b8f830b8",
+    "titleHeader": "I'm inside my home, and I'm thinking...",
+    "dailyEntry": "Where would I be, if it wasn't for this horrible situation? Maybe outside walking the dog, maybe out with my friends. I don't know! There were times when I was to lazy to get out of my comfort but it's now that I realize that I've taken all this for granted. I wish I could go out now but it's safer to stay home..."
+    // "bootcamp": "5d713995b721c3bb38c1f5d0",
+    // "user": "5d7a514b5d2c12c7449be045"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5d0",
+    "titleHeader": "I'm greatful for being healthy!",
+    "dailyEntry": "I keep getting calls from friends and family that have been diagnosed with this terrifying pandemic. I feel bad, but it's out of my control so I pray for them. I'm blessed to be able to stay home and still provide for my family. A lot of other friends are also losing their job, but they will get back up soon!"
+    // "bootcamp": "5d713995b721c3bb38c1f5d0",
+    // "user": "5d7a514b5d2c12c7449be045"
+  }
+]
