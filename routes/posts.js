@@ -1,36 +1,19 @@
 const express = require('express');
+const {
+  getPosts,
+  getPost,
+  createPost,
+  updatePost,
+  deletePost,
+} = require('../controllers/posts');
+
 const router = express.Router();
 
-//Getting all users
-router.get('/', (req, res) => {
-  res.status(200).json({ success: true, msg: 'Show all posts' });
-});
+//GET all posts & POST
+router.route('/').get(getPosts).post(createPost);
 
-//Get a single user for the specific id
-router.get('/:id', (req, res) => {
-  res
-    .status(200)
-    .json({ success: true, msg: `Get post with ID: ${req.params.id}` });
-});
-
-//Creating a new user
-router.post('/', (req, res) => {
-  res.status(200).json({ success: true, msg: 'Create new post' });
-});
-
-//Display user for specific ID
-router.put('/:id', (req, res) => {
-  res
-    .status(200)
-    .json({ success: true, msg: `Update post with ID: ${req.params.id}` });
-});
-
-//Delete user by id
-router.delete('/:id', (req, res) => {
-  res
-    .status(200)
-    .json({ success: true, msg: `Delete post with ID: ${req.params.id}` });
-});
+//GET & POST
+router.route('/:id').get(getPost).put(updatePost).delete(deletePost);
 
 //Make this available to use in other files
 module.exports = router;
