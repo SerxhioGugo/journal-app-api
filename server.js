@@ -17,6 +17,9 @@ const posts = require('./routes/posts');
 
 const app = express();
 
+// Body parser
+app.use(express.json());
+
 //Dev logging middleware / run only on dev environment
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
@@ -30,7 +33,8 @@ const PORT = process.env.PORT || 5000;
 
 const server = app.listen(PORT, () => {
   console.log(
-    `Server running on ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
+    `Server running on ${process.env.NODE_ENV} mode on port ${PORT}`.magenta
+      .bold
   );
 });
 

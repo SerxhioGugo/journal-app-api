@@ -1,3 +1,6 @@
+//Import models
+const Post = require('../models/Post');
+
 //Setting up routes to seperate controllers
 
 /*--------------------------------------------------------------------------*/
@@ -26,8 +29,16 @@ exports.getPost = (req, res, next) => {
 // @route       POST /api/v1/posts/
 // @access      Private
 
-exports.createPost = (req, res, next) => {
-  res.status(200).json({ success: true, msg: 'Create new post' });
+exports.createPost = async (req, res, next) => {
+  try {
+    const post = await Post.create(req.body);
+    res.status(201).json({
+      success: true,
+      data: post,
+    });
+  } catch (err) {
+    res.status(400).json({ success: false });
+  }
 };
 
 /*--------------------------------------------------------------------------*/
