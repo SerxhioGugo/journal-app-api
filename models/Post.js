@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const slugify = require('slugify');
 
 //MONGOOSE MODEL
 //Change later for optional titleHeader or dailyEntry
@@ -24,3 +25,10 @@ const PostSchema = new mongoose.Schema({
 
 //Makes this model available to use in the Controllers
 module.exports = mongoose.model('Post', PostSchema);
+
+// Create post slug from the name
+
+PostSchema.pre('save', function (next) {
+  this.slug = slugify(this.titleHeader, { lower: true });
+  next();
+});

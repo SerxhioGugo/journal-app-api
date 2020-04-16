@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const colors = require('colors');
 const connectDB = require('./config/db');
+const errorHandler = require('./middleware/error');
 
 //Load dotenv files (environment variables)
 dotenv.config({ path: './config/config.env' });
@@ -28,6 +29,7 @@ app.use('default', morgan);
 
 //Mount routers
 app.use('/api/v1/posts', posts);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
