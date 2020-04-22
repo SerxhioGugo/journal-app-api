@@ -1,0 +1,23 @@
+[
+  {
+    "name": "3entries",
+    "title": "You first 3 entrys",
+    "description": "You just added your 3rd entry, you should be proud!",
+    "nextGoal": "12 more entries for your next achievement",
+    "completed": false
+  },
+  {
+    "name": "15entries",
+    "title": "Congrats!",
+    "description": "You just added your 15th entry, Keep on Keeping ON!",
+    "nextGoal": "35 more entries for your next achievement",
+    "completed": false
+  },
+  {
+    "name": "50entries",
+    "title": "50 Entries, can you believe it?",
+    "description": "You're devoted to this because it's helping you!!",
+    "nextGoal": "50 more entries for your next achievement",
+    "completed": false
+  }
+]
